@@ -6,7 +6,7 @@ aimed to strip the functionality to necessities only and modify the
 output format. It does not check whether DeaDBeeF is running, and
 can only output the results of /np command in like so:
 
-* mw is listening to Artist - (Album) - Track [XXXkbps/YYYYYHz]
+* mw is listening to Artist - (Album) - Track [XXbit / YYYYkbps / ZZZZZZHz]
 
 Unlike the original, this version does not check for whether or not
 DeaDBeeF is running, solving certain annoyances on some systems, and
