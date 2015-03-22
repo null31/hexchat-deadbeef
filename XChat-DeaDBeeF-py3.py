@@ -28,22 +28,16 @@ from time import sleep
 ############################
 	
 def deadbeef_current_track(word, word_eol, userdata):
-	read_track = subprocess.Popen('/opt/deadbeef/bin/deadbeef --nowplaying "%a - (%b) - %t [%@:BPS@bit / %@:BITRATE@kbps / %@:SAMPLERATE@Hz]"',shell=True,stdout=subprocess.PIPE)
-	read_track_out = read_track.communicate()[0]
-	decode_read_track_out = str(read_track_out)
-	announce_track = str(decode_read_track_out).strip('\n')
-	xchat.command("me is listening to "+announce_track)
-	
-	return xchat.EAT_ALL
-      
+        read_track = subprocess.check_output('/usr/bin/deadbeef --nowplaying "%a - (%b) - %t [%@:BPS@bit / %@:BITRATE@kbps / %@:SAMPLERATE@Hz]"',shell=True).decode("utf-8")
+        xchat.command("me is listening to " + read_track)
+        return xchat.EAT_ALL
+
 def unload(userdata):
-	print("XChat-DeaDBeeF %s unloaded!" % (__module_version__))
-	
-	return xchat.EAT_ALL
-	
+        print("XChat-DeaDBeeF %s unloaded!" % (__module_version__))
+        return xchat.EAT_ALL
+
 if __name__ == '__main__':
-	
-	print("XChat-DeaDBeeF %s loaded successfully! - by %s" % (__module_version__,__module_author__))
-	
+        print("XChat-DeaDBeeF %s loaded successfully! - by %s" % (__module_version__,__module_author__))
+
 #Display the current track
-	xchat.hook_command('tellnp',deadbeef_current_track)
+        xchat.hook_command('tellnp',deadbeef_current_track)
