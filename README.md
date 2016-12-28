@@ -1,12 +1,12 @@
-xchat-deadbeef-stripped
+xchat-deadbeef-stripped-v2
 =======================
 
-This is a modified version of iceTwy/xchat-deadbeef Python 3 plugin,
+This is a modified version of mwgg/xchat-deadbeef-stripped (is from iceTwy/xchat-deadbeef) Python 3 plugin,
 aimed to strip the functionality to necessities only and modify the
 output format. It does not check whether DeaDBeeF is running, and
 can only output the results of /np command in like so:
 
-* mw is listening to Artist - (Album) - Track [XXbit / YYYYkbps / ZZZZZZHz]
+* nickname is listening to: Artist - Album - Track | Playback / Length | Codec | yyyy kbps | zzzzzHZ
 
 Unlike the original, this version does not check for whether or not
 DeaDBeeF is running, solving certain annoyances on some systems, and
