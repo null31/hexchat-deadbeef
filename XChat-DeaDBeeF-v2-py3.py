@@ -28,7 +28,7 @@ from time import sleep
 ############################
 
 def deadbeef_current_track(word, word_eol, userdata):
-        read_track = subprocess.check_output('/usr/bin/deadbeef --nowplaying-tf "%artist% - %album% - %title% | %playback_time% / %length% | %codec% | %bitrate% | %samplerate% | $info(__bitspersample)"',shell=True).decode("utf-8")
+        read_track = subprocess.check_output('/usr/bin/deadbeef --nowplaying-tf "%artist% - %album% - %title% | %playback_time% / %length% | %codec% | %bitrate% kbps | %samplerate%Hz"',shell=True).decode("utf-8")
         xchat.command("me is listening to " + read_track)
         return xchat.EAT_ALL
 
