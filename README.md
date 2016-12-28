@@ -13,6 +13,8 @@ DeaDBeeF is running, solving certain annoyances on some systems, and
 it is not able to control playback. The only function is to announce
 current track in a format shown above. It includes Python 3 version ONLY.
 
+* This works only in DeaDBeeF 0.7.0 or newer.
+
 
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
