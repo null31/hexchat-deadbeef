@@ -13,10 +13,10 @@
 #  * nickname is listening to: Artist - Album - Track | Playback / Length | Codec | yyyy kbps | zzzzzHZ
 #
 
-__module_name__ = "XChat-DeaDBeeF"
-__module_author__ = "iceTwy / mwgg / null31"
-__module_description__ = "DeaDBeeF integration in XChat and HexChat."
-__module_version__ = "2.0"
+__module_name__ = "HexChat-DeaDBeeF"
+__module_author__ = "iceTwy (v1.0) / mwgg (v2.0) / null31 (v3.0)"
+__module_description__ = "DeaDBeeF integration in HexChat."
+__module_version__ = "3.0"
 __module_deadbeef_version__ = "0.7.0"
 
 ############################
