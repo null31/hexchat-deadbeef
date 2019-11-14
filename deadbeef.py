@@ -20,7 +20,7 @@ __module_version__ = "3.0"
 __module_deadbeef_version__ = "0.7.0"
 
 ############################
-import xchat
+import hexchat
 import subprocess
 
 from threading import Thread
@@ -29,15 +29,15 @@ from time import sleep
 
 def deadbeef_current_track(word, word_eol, userdata):
         read_track = subprocess.check_output('/usr/bin/deadbeef --nowplaying-tf "%artist% - %album% - %title% | %playback_time% / %length% | %codec% | %bitrate% kbps | %samplerate%Hz"',shell=True).decode("utf-8")
-        xchat.command("me is listening to: " + read_track)
-        return xchat.EAT_ALL
+        hexchat.command("me is listening to: " + read_track)
+        return hexchat.EAT_ALL
 
 def unload(userdata):
         print("XChat-DeaDBeeF %s unloaded!" % (__module_version__))
-        return xchat.EAT_ALL
+        return hexchat.EAT_ALL
 
 if __name__ == '__main__':
         print("XChat-DeaDBeeF %s loaded successfully! - by %s" % (__module_version__,__module_author__))
 
 #Display the current track
-        xchat.hook_command('np',deadbeef_current_track)
+        hexchat.hook_command('np',deadbeef_current_track)
